@@ -15,7 +15,11 @@ class Location extends React.Component {
         };
     }
     componentDidMount() {
+        if (!window.location.hash) {
+            window.location = window.location + '#loaded';
+            window.location.reload();
 
+        }
 
         firebase.database().ref("sensorData/1-set").on("value", snapshot => {
             
@@ -28,6 +32,7 @@ class Location extends React.Component {
 
 
     }
+   
 
     render() {
         return (

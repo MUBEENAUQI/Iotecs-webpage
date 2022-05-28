@@ -42,7 +42,7 @@ class ECG extends React.Component {
 	}
 
 	componentDidMount() {
-
+		
 		firebase.database().ref("sensorData/1-set").on("value", snapshot => {
 			//console.log(snapshot.val().object);
 			//this.setState({ count: snapshot.val().ecg });
@@ -54,8 +54,8 @@ class ECG extends React.Component {
 			this.setState({ six: snapshot.val().ecg6 });
 			this.setState({ seven: snapshot.val().ecg7 });
 			this.setState({ eight: snapshot.val().ecg8 });
-			//this.setState({ nine: snapshot.val().ecg9 });
-			//this.setState({ ten: snapshot.val().ecg10 });
+			this.setState({ nine: snapshot.val().ecg9 });
+			this.setState({ ten: snapshot.val().ecg10 });
 		});
 
 		setInterval(this.updateChart, updateInterval);
@@ -80,8 +80,8 @@ class ECG extends React.Component {
 			dps.push({ x: xVal, y: this.state.six }); xVal++; dps.shift();
 			dps.push({ x: xVal, y: this.state.seven }); xVal++; dps.shift();
 			dps.push({ x: xVal, y: this.state.eight }); xVal++; dps.shift();
-			//dps.push({ x: xVal, y: this.state.nine }); xVal++; dps.shift();
-			//dps.push({ x: xVal, y: this.state.ten }); xVal++; dps.shift();
+			dps.push({ x: xVal, y: this.state.nine }); xVal++; dps.shift();
+			dps.push({ x: xVal, y: this.state.ten }); xVal++; dps.shift();
 
 
 			k = 0
@@ -95,8 +95,8 @@ class ECG extends React.Component {
 			dps.push({ x: xVal, y: this.state.six }); xVal++;
 			dps.push({ x: xVal, y: this.state.seven }); xVal++;
 			dps.push({ x: xVal, y: this.state.eight }); xVal++;
-			//dps.push({ x: xVal, y: this.state.nine }); xVal++;
-			//dps.push({ x: xVal, y: this.state.ten }); xVal++;
+			dps.push({ x: xVal, y: this.state.nine }); xVal++;
+			dps.push({ x: xVal, y: this.state.ten }); xVal++;
         }
 		this.chart.render();
 	}

@@ -1,13 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect} from 'react';
 import { db } from "../connect/firebases";
 import ViewMessage from '../components/viewMessage';
 import Button from 'react-bootstrap/Button';
-
+var reloadCount = 1;
 
 export default function Messages() {
 
     const [name, setName] = useState("");
     const [data, setData] = useState("");
+
+    useEffect(() => {
+        if (!window.location.hash) {
+            window.location = window.location + '#loaded';
+            window.location.reload();
+        
+        }
+    }, []);
+    
 
     const handleOnChangename = (e) => {
         setName(e.target.value);
@@ -36,6 +45,7 @@ export default function Messages() {
     };
 
     return (
+
         <div>
         <div>
                 <div className="d-flex bd-highlight example-parent">
