@@ -1,11 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\.github",
+    "\\build\\static",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\Bodypara",
-    "\\src\\connect"
+    "\\src\\components\\Bodypara"
   ],
-  "SelectedNode": "\\src\\components\\Bodypara\\ECG.js",
+  "SelectedNode": "\\src\\components\\Navigation.jsx",
   "PreviewInSolutionExplorer": false
 }

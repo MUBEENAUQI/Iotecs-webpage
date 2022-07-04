@@ -4,14 +4,13 @@ import "firebase/compat/database";
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAotDNmrUmu-azH9ZzrvYpCdKMPOWunxR8",
-    authDomain: "iotecs-for-emt.firebaseapp.com",
-    databaseURL: "https://iotecs-for-emt-default-rtdb.firebaseio.com",
-    projectId: "iotecs-for-emt",
-    storageBucket: "iotecs-for-emt.appspot.com",
-    messagingSenderId: "697683786158",
-    appId: "1:697683786158:web:c64f5e97dfd1ee6d8a703f",
-    measurementId: "G-18WYPLKPFV"
+    apiKey: "AIzaSyBYu9n1QnkgT94RSjTRoeEHDPHdl7Y6s8s",
+    authDomain: "fir-iotecs.firebaseapp.com",
+    projectId: "fir-iotecs",
+    storageBucket: "fir-iotecs.appspot.com",
+    messagingSenderId: "938852244026",
+    appId: "1:938852244026:web:4f03c6a93eef95459cb303",
+    measurementId: "G-BWVE3NNKQH"
 };
 
 const app = firebase.initializeApp(firebaseConfig);
